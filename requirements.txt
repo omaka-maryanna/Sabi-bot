@@ -1,6 +1,6 @@
 streamlit
 python-dotenv
 requests
-groq
 pandas
-openpyxl
+chromadb
+groq
