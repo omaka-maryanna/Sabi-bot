@@ -1,10 +1,10 @@
 import chromadb
 from chromadb.utils import embedding_functions
 
-# ✅ Use /tmp for persistence (works on Streamlit Cloud)
-chroma_client = chromadb.PersistentClient(path="/tmp/chroma_db")
+# ✅ In-memory only (no disk writes, works on Streamlit Cloud)
+chroma_client = chromadb.Client()
 
-# Example embedding function (you can adjust if you’re using another one)
+# Example embedding function (you can adjust if using another one)
 embedding_func = embedding_functions.DefaultEmbeddingFunction()
 
 # Create or load your collection
